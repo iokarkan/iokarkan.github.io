@@ -104,8 +104,33 @@ svg:hover{
 }
 
 
-/* put logo-name-p by the svg */
+/* put logo-surname-p by the svg */
 #logo-name-p {
+  z-index: -1;
+  position: absolute;
+  top: -1.5rem;
+  /* left: rem; */
+  font-size: 2rem;
+  opacity: 0;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  color: rgb(117, 117, 117);
+  transition: box-shadow 0.3s ease-in-out;
+  -webkit-border-radius: 1rem; 
+  -moz-border-radius: 1rem;  
+  border-radius: 1rem;
+  padding: 1rem;
+
+  /* border-width: 10px; */
+  /* border-color: aqua; */
+  /* border-style: dotted; */
+
+  /* border-left: 5px dotted red; */
+  /* border-right: 5px solid red; */
+}
+/* put logo-surname-p by the svg */
+#logo-surname-p {
   z-index: -1;
   position: absolute;
   font-size: 3rem;
@@ -128,7 +153,7 @@ svg:hover{
   /* border-right: 5px solid red; */
 }
 
-#logo-name-p:hover{
+#logo-surname-p:hover{
   -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9);
 }
 

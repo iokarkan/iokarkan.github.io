@@ -50,9 +50,14 @@
             stroke="#496EF0" stroke-width="2" stroke-linecap="round" />
         </g>
       </svg>
+    
+    
+      <div class="center-div" style="position:relative; top: -9rem; left: -6rem ">
+        <span id='logo-name-p' onclick="show()">Ioannis</span>
+      </div>
 
       <div class="center-div" style="position:relative; top: -9rem; left: -6rem ">
-        <span id='logo-name-p' onclick="show()">arkanias</span>
+        <span id='logo-surname-p' onclick="show()">arkanias</span>
       </div>
     </div>
 
@@ -137,7 +142,14 @@
 
     function opacity_smooth() {
       opac_counter = counter + 1;
+
       var logo = document.getElementById('logo-name-p');
+      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out';
+      // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
+      logo.style.opacity = opac_counter % 2;
+      logo.style.zIndex = opac_counter % 2 ;
+      
+      var logo = document.getElementById('logo-surname-p');
       logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out';
       // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
       logo.style.opacity = opac_counter % 2;
@@ -171,7 +183,7 @@
 
     function rotate_svg() {
       var svg = document.getElementsByTagName('svg')[0];
-      var logo = document.getElementsByTagName('logo-name-p')[0];
+      var logo = document.getElementsByTagName('logo-surname-p')[0];
       var svg_rect = svg.getBoundingClientRect();
       // rotate 90 deg
       if (counter % 2 == 0) {
