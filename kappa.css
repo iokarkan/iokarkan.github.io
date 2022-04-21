@@ -1,0 +1,203 @@
+/*  
+Thanks to: Usama Tahir
+https://medium.com/@AmJustSam
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+ }
+ 
+ html{
+     width: 100vw;
+     height: 1vh;
+ }
+ 
+ /* CSS which you need for blurred box */
+ body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  /* background-image:url(http://bit.ly/2gPLxZ4); */
+  background-image:url(https://images.unsplash.com/photo-1520764816423-52375cbff016?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80);
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica;
+  letter-spacing: 0.02em;
+   font-weight: 400;
+  -webkit-font-smoothing: antialiased; 
+ }
+
+.blurred-box {
+  /* z-index: -2; */
+  width: 50%;
+  min-width: 25rem;
+  position: relative;
+  margin: 0 auto;
+  
+  /* background: inherit; */
+  border-radius: 20px;
+  /* overflow: hidden; */
+
+}
+
+.blurred-box::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  /* background: inherit;  */
+  position: absolute;
+  /* left: 12rem; */
+  /* left position */
+  /* right: 0; */
+  top: 2.0rem;  
+  /* top position  */
+  /* bottom: 0; */
+  /* background-color: aqua; */
+  box-shadow: inset 0 0 0 500px rgba(255, 255, 255, 0.95);
+  filter: blur(1px);
+}
+
+.center-div {
+  position: relative;
+  top: 10rem;
+  /* width: 50%; */
+  /* margin: 0 auto; */
+  text-align: center;
+  align-items: center;
+}
+
+.button-div {
+  position: relative;
+  top: 10rem;
+  /* width: 50%; */
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+button {
+  margin: 50px;
+  font-family: inherit;
+}
+
+svg {
+  z-index: 1;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  /* left: 5rem; */
+  cursor: pointer;
+  border: 3px;
+  transform: rotate(-90deg) scale(3);
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 0.5rem;
+  -webkit-border-radius: 1rem; 
+  -moz-border-radius: 1rem;  
+  border-radius: 1rem; 
+
+}
+
+svg:hover{
+  -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9);
+}
+
+
+/* put logo-name-p by the svg */
+#logo-name-p {
+  z-index: -1;
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  color: rgb(117, 117, 117);
+  transition: box-shadow 0.3s ease-in-out;
+  -webkit-border-radius: 1rem; 
+  -moz-border-radius: 1rem;  
+  border-radius: 1rem;
+  padding: 1rem;
+
+  /* border-width: 10px; */
+  /* border-color: aqua; */
+  /* border-style: dotted; */
+
+  /* border-left: 5px dotted red; */
+  /* border-right: 5px solid red; */
+}
+
+#logo-name-p:hover{
+  -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9);
+}
+
+
+#Vector-1 {
+  opacity: 0;
+}
+
+
+
+
+/* Slide button styling */
+.slide {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 30px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  left: -8rem;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: opacity 1s 1s ease-in-out;
+  pointer-events: none; 
+}
+
+.slide i {
+  opacity: 0;
+  font-size: 13px;
+  transition: 0.2s;
+  position: absolute;
+  right: 10px;
+  top: 21px;
+  transition: transform 1;
+}
+
+.slide div {
+  transition: transform 0.8s;
+}
+
+.slide:hover div {
+  transform: translateX(-6px);
+}
+
+.slide::after {
+  content: "";
+  /* background-color: #d8d8d8; */
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+}
+
+.slide:hover i {
+  opacity: 1;
+  transform: translateX(-6px);
+}
+/* End of Slide Button  */
+
+#about-btn {
+  font-family: Corbel;
+}
+
+#contact-btn {
+  font-family: Corbel;
+  left: 7rem;
+  top: -9.5rem;
+}
