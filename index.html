@@ -26,18 +26,29 @@
 
 
 <body>
-  <div class="center-div">
-    <svg width="50" height="99" viewBox="0 0 50 99" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="show()">
-      <g id="Frame-1">
-        <rect width="50" height="99" />
-        <g id="Group-1">
-          <ellipse id="point5" cx="43.6846" cy="14.3414" rx="4.48597" ry="4.48875" fill="#4A4A4A" fill-opacity="0.47" />
-          <ellipse id="point4" cx="36.3762" cy="40.6387" rx="4.48597" ry="4.48875" fill="#4A4A4A" fill-opacity="0.47" />
-          <ellipse id="point3" cx="24.4136" cy="28.6687" rx="4.48597" ry="4.48875" fill="#4A4A4A" fill-opacity="0.47" />
-          <ellipse id="point2" cx="18.4323" cy="67.5712" rx="4.48597" ry="4.48875" fill="#4A4A4A" fill-opacity="0.47" />
-          <ellipse id="point1" cx="36.3762" cy="88.5188" rx="4.48597" ry="4.48875" fill="#4A4A4A" fill-opacity="0.47" />
+  <div class="blurred-box">
+    <div class="center-div">
+      <svg width="50" height="99" viewBox="0 0 50 99" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="show()">
+        <g id="Frame-1">
+          <rect width="50" height="99" />
+          <g id="Group-1">
+            <ellipse id="point5" cx="43.6846" cy="14.3414" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+              fill-opacity="0.47" />
+            <ellipse id="point4" cx="36.3762" cy="40.6387" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+              fill-opacity="0.47" />
+            <ellipse id="point3" cx="24.4136" cy="28.6687" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+              fill-opacity="0.47" />
+            <ellipse id="point2" cx="18.4323" cy="67.5712" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+              fill-opacity="0.47" />
+            <ellipse id="point1" cx="36.3762" cy="88.5188" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+              fill-opacity="0.47" />
+          </g>
+          <path id="Line-1" d="M3 20 L3 80" stroke="black" stroke-opacity="0.52" stroke-width="5"
+            stroke-linecap="round" />
+          <path id="Vector-1"
+            d="M42.5263 6C41.9134 25.304 25.809 38.9639 16.5725 56.579C7.40028 74.0713 24.2119 85.8235 44 96"
+            stroke="#496EF0" stroke-width="2" stroke-linecap="round" />
         </g>
-<<<<<<< HEAD
       </svg>
     
     
@@ -48,62 +59,52 @@
       <div class="center-div" style="position:relative; top: -9rem; left: -6rem ">
         <span id='logo-surname-p' onclick="show()">arkanias</span>
       </div>
-=======
-        <path id="Line-1" d="M3 20 L3 80" stroke="black" stroke-opacity="0.52" stroke-width="5"
-          stroke-linecap="round" />
-        <path id="Vector-1"
-          d="M42.5263 6C41.9134 25.304 25.809 38.9639 16.5725 56.579C7.40028 74.0713 24.2119 85.8235 44 96"
-          stroke="#496EF0" stroke-width="2" stroke-linecap="round" />
-      </g>
-    </svg>
-
-    <div class="center-div" style="position:relative; top: -9rem; left: -6rem ">
-      <span id='logo-name-p' onclick="show()">arkanias</span>
->>>>>>> parent of 5c13d2b... index
     </div>
-  </div>
 
-  <div class="button-div">
-    <button type="button" class="slide" id="about-btn" onclick="click_about()">
-      <div>About</div>
-      <i class="icon-arrow-down"></i>
-    </button>
-  </div>
+    <div class="button-div">
+      <button type="button" class="slide" id="about-btn" onclick="click_about()">
+        <div>About</div>
+        <i class="icon-arrow-down"></i>
+      </button>
+    </div>
 
-  <div class="button-div">
-    <button type="button" class="slide" id="contact-btn" onclick="click_contact()">
-      <div>Contact</div>
-      <i class="icon-arrow-up"></i>
-  </div>
+    <div class="button-div">
+      <button type="button" class="slide" id="contact-btn" onclick="click_contact()">
+        <div>Contact</div>
+        <i class="icon-arrow-up"></i>
+    </div>
 
-  <div class='center-div' style="opacity: 0;
+    <div class='center-div' style="opacity: 0;
   z-index: -1;
   font-size: 15px;
   font-family: 'Monaco';
   top: -10rem;" id="contact-div">
-    <a href="https://www.linkedin.com/in/ioannis-karkanias-71996a1aa/"><img src='icons/linkedin.png'
-        alt='Visit my Linked-In page' width='auto' height='40px'></img></a>
-    <a href="mailto:ioannis.karkanias@gmail.com"><img src='icons/Gmail.png' alt='Send an e-mail to my Gmail'
-        width='auto' height='40px'></img></a>
-    <a href="tel:00306983473501"><img src='icons/icons8-mobile-phone-64.png' alt='Call my number' width='auto'
-        height='40px'></img></a>
-  </div>
+      <a href="https://www.linkedin.com/in/ioannis-karkanias-71996a1aa/"><img src='icons/linkedin.png'
+          alt='Visit my Linked-In page' width='auto' height='40px'></img></a>
+      <a href="mailto:ioannis.karkanias@gmail.com"><img src='icons/Gmail.png' alt='Send an e-mail to my Gmail'
+          width='auto' height='40px'></img></a>
+      <a href="tel:00306983473501"><img src='icons/icons8-mobile-phone-64.png' alt='Call my number' width='auto'
+          height='40px'></img></a>
+    </div>
 
-  <div class='center-div' style="opacity: 0;
+    <div class='center-div' style="opacity: 0;
   z-index: -1;
   font-size: 12px;
-  font-family: 'Monaco';
+  font-family: 'Corbel';
+  color: rgb(39, 37, 37);
   pointer-events: none; top: -3rem;" id="info-div">
-    <h1 text-decoration='underline'>Modern solutions to IT challenges</h1>
-    <h2>Data Analysis</h2>
-    <h3>Clean-up and organize poorly structured information</h3>
-    <h2>Data Visualization</h2>
-    <h3>Obtain valuable insights for your datasets</h3>
-    <h2>Statistical Interpretation</h2>
-    <h3>Understand the decisions you need to make</h3>
+      <h1 text-decoration='underline'>Modern solutions to IT challenges</h1>
+      <h2>Data Analysis</h2>
+      <h3>Clean-up and organize poorly structured information</h3>
+      <h2>Data Visualization</h2>
+      <h3>Obtain valuable insights for your datasets</h3>
+      <h2>Statistical Interpretation</h2>
+      <h3>Understand the decisions you need to make</h3>
+    </div>
+
+
+
   </div>
-
-
 
   </div>
 
@@ -120,13 +121,14 @@
     function click_about() {
       var info = document.getElementById('info-div');
       info.style.transition = 'opacity 1.0s 0.5s';
+      info.style.zIndex = info.style.opacity == '1' ? '0' : '1';
       info.style.opacity = info.style.opacity == '1' ? '0' : '1';
     }
 
     function click_contact() {
       var info = document.getElementById('contact-div');
-      info.style.zIndex = 0;
-      info.style.transition = 'opacity 1.0s 0.5s';
+      info.style.zIndex = info.style.opacity == '1' ? '0' : '1';
+      info.style.transition = 'opacity 1.0s 0.5s, z-index 0.5s 0.5s';
       info.style.opacity = info.style.opacity == '1' ? '0' : '1';
 
     }
@@ -145,7 +147,6 @@
       logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out';
       // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
       logo.style.opacity = opac_counter % 2;
-<<<<<<< HEAD
       logo.style.zIndex = opac_counter % 2 ;
       
       var logo = document.getElementById('logo-surname-p');
@@ -153,28 +154,27 @@
       // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
-=======
-      logo.style.zIndex = opac_counter % 2 - 1;
->>>>>>> parent of 5c13d2b... index
 
       var about = document.getElementById('about-btn')
       about.style.pointerEvents = 'auto';
       about.style.opacity = opac_counter % 2;
-      about.style.zIndex = opac_counter % 2 - 1;
+      about.style.zIndex = opac_counter % 2 ;
+      about.style.transition = 'opacity 0.5s 1s, z-index 0.5s 1s';
       var contact = document.getElementById('contact-btn')
       contact.style.pointerEvents = 'auto';
       contact.style.opacity = opac_counter % 2;
-      contact.style.zIndex = opac_counter % 2 - 1;
-      
+      contact.style.zIndex = opac_counter % 2 ;
+      contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s 1s';
 
       var info = document.getElementById('info-div');
       info.style.opacity = 0;
-      info.style.transition = 'opacity 1.0s 0.5s';
+      info.style.zIndex = opac_counter % 2 - 1;
+      info.style.transition = 'opacity 0.5s 1s, z-index 2s 1s';
       // console.log(info.style.opacity)
       var contact = document.getElementById('contact-div');
       contact.style.opacity = 0;
-      contact.style.transition = 'opacity 1.0s 0.5s';
-      contact.style.zIndex = opac_counter % 2 - 1;
+      contact.style.zIndex = opac_counter % 2 -1;
+      contact.style.transition = 'opacity 0.5s 1s, z-index 2s 1s';
       // console.log(contact.style.opacity)
 
 
