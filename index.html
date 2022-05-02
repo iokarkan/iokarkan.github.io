@@ -31,9 +31,9 @@
       <svg width="50" height="99" viewBox="0 0 50 99" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="show()">
         <g id="Frame-1">
           <rect width="50" height="99" />
-          <g id="Group-1">
+          <g id="Group-1" style="border: solid 3px black;">
             <ellipse id="point5" cx="43.6846" cy="14.3414" rx="4.48597" ry="4.48875" fill="#4A4A4A"
-              fill-opacity="0.47" />
+              fill-opacity="0.47" border="solid 2px #1B7530"/>
             <ellipse id="point4" cx="36.3762" cy="40.6387" rx="4.48597" ry="4.48875" fill="#4A4A4A"
               fill-opacity="0.47" />
             <ellipse id="point3" cx="24.4136" cy="28.6687" rx="4.48597" ry="4.48875" fill="#4A4A4A"
@@ -156,12 +156,12 @@
       logo.style.zIndex = opac_counter % 2 ;
 
       var about = document.getElementById('about-btn')
-      about.style.pointerEvents = 'auto';
+      about.style.pointerEvents = ((opac_counter%2==1) ? 'auto' : 'none');
       about.style.opacity = opac_counter % 2;
       about.style.zIndex = opac_counter % 2 ;
       about.style.transition = 'opacity 0.5s 1s, z-index 0.5s 1s';
       var contact = document.getElementById('contact-btn')
-      contact.style.pointerEvents = 'auto';
+      contact.style.pointerEvents = ((opac_counter%2==1) ? 'auto' : 'none');
       contact.style.opacity = opac_counter % 2;
       contact.style.zIndex = opac_counter % 2 ;
       contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s 1s';

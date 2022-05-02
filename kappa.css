@@ -100,7 +100,8 @@ svg {
 }
 
 svg:hover{
-  -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9);
+  /* -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9); */
+
 }
 
 
@@ -153,9 +154,9 @@ svg:hover{
   /* border-right: 5px solid red; */
 }
 
-#logo-surname-p:hover{
+/* #logo-surname-p:hover{
   -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9);
-}
+} */
 
 
 #Vector-1 {
