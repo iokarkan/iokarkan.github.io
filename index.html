@@ -32,16 +32,21 @@
         <g id="Frame-1">
           <rect width="50" height="99" />
           <g id="Group-1" style="border: solid 3px black;">
-            <ellipse id="point5" cx="43.6846" cy="14.3414" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+            <ellipse id="point1" cx="43.6846" cy="14.3414" rx="4.48597" ry="4.48875" fill="#4A4A4A"
               fill-opacity="0.47" border="solid 2px #1B7530"/>
-            <ellipse id="point4" cx="36.3762" cy="40.6387" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+            <ellipse id="point2" cx="36.3762" cy="40.6387" rx="4.48597" ry="4.48875" fill="#4A4A4A"
               fill-opacity="0.47" />
             <ellipse id="point3" cx="24.4136" cy="28.6687" rx="4.48597" ry="4.48875" fill="#4A4A4A"
               fill-opacity="0.47" />
-            <ellipse id="point2" cx="18.4323" cy="67.5712" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+            <ellipse id="point4" cx="18.4323" cy="67.5712" rx="4.48597" ry="4.48875" fill="#4A4A4A"
               fill-opacity="0.47" />
-            <ellipse id="point1" cx="36.3762" cy="88.5188" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+            <ellipse id="point5" cx="36.3762" cy="88.5188" rx="4.48597" ry="4.48875" fill="#4A4A4A"
               fill-opacity="0.47" />
+            <!-- for some reason having all ellipses here oscillating with keyframes -->
+            <!-- messes up the vector line animation -->
+            <!-- so hack/fix it by adding a dummy point with opacity 0 -->
+            <ellipse id="point6" style="opacity: 0" cx="36.3762" cy="88.5188" rx="4.48597" ry="4.48875" fill="#4A4A4A"
+              fill-opacity="0.47" /> 
           </g>
           <path id="Line-1" d="M3 20 L3 80" stroke="black" stroke-opacity="0.52" stroke-width="5"
             stroke-linecap="round" />
@@ -116,9 +121,10 @@
     let counter = 2;
 
     function show() {
+      opac_counter = counter + 1;
+      draw_line();
       rotate_svg();
       opacity_smooth()
-      draw_line();
       counter++;
     }
 
@@ -132,59 +138,75 @@
     function click_contact() {
       var info = document.getElementById('contact-div');
       info.style.zIndex = info.style.opacity == '1' ? '0' : '1';
-      info.style.transition = 'opacity 1.0s 0.5s, z-index 0.5s 0.5s';
+      info.style.transition = 'opacity 1s ease-in-out';
       info.style.opacity = info.style.opacity == '1' ? '0' : '1';
-
     }
 
     function draw_line() {
       var line = document.getElementById('Vector-1');
-      line.style.transition = 'opacity 1.0s 0.5s';
+      line.style.zIndex = 2;
+      line.style.transition = 'opacity 0.5s ease-in 0.5s, z-index 0.5s ease-in-out 1s';
       line.style.opacity = opac_counter % 2;
     }
 
 
     function opacity_smooth() {
-      opac_counter = counter + 1;
 
       var logo = document.getElementById('logo-name-p');
-      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out';
+      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s';
       // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
       
       var logo = document.getElementById('logo-surname-p');
-      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out';
+      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s';
       // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
 
       var logo = document.getElementById('logo-profession-p');
-      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out';
+      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s';
       // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
+
+      // var logo = document.getElementById('point1');
+      // logo.style.transition = 'opacity 5s 5s'
+      // logo.style.opacity = 1;
+      // logo.style.animationIterationCount = opac_counter % 2;
+      // var logo = document.getElementById('point2');
+      // logo.style.animationIterationCount = opac_counter % 2;
+      // var logo = document.getElementById('point3');
+      // logo.style.animationIterationCount = opac_counter % 2;
+      // var logo = document.getElementById('point4');
+      // logo.style.animationIterationCount = opac_counter % 2;
+      // var logo = document.getElementById('point5');
+      // logo.style.animationIterationCount = opac_counter % 2;
+
+      
 
       var about = document.getElementById('about-btn')
       about.style.pointerEvents = ((opac_counter%2==1) ? 'auto' : 'none');
       about.style.opacity = opac_counter % 2;
       about.style.zIndex = opac_counter % 2 ;
-      about.style.transition = 'opacity 0.5s 1s, z-index 0.5s 1s';
+      about.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
+
       var contact = document.getElementById('contact-btn')
       contact.style.pointerEvents = ((opac_counter%2==1) ? 'auto' : 'none');
+      contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
       contact.style.opacity = opac_counter % 2;
       contact.style.zIndex = opac_counter % 2 ;
-      contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s 1s';
 
       var info = document.getElementById('info-div');
       info.style.opacity = 0;
       info.style.zIndex = opac_counter % 2 - 1;
-      info.style.transition = 'opacity 0.5s 1s, z-index 2s 1s';
+      info.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
       // console.log(info.style.opacity)
+
       var contact = document.getElementById('contact-div');
       contact.style.opacity = 0;
       contact.style.zIndex = opac_counter % 2 -1;
-      contact.style.transition = 'opacity 0.5s 1s, z-index 2s 1s';
+      contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
       // console.log(contact.style.opacity)
 
 
@@ -202,7 +224,7 @@
         svg.style.transform = 'rotate(-90deg) scale(3)';
       }
 
-      svg.style.transition = 'box-shadow 0.3s ease-in-out, transform 0.75s 1s ease-in-out';
+      svg.style.transition = 'box-shadow 0.3s ease-in-out, transform 0.75s ease-in-out 1s';
     }
 
   </script>

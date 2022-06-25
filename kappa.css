@@ -101,8 +101,53 @@ svg {
 
 svg:hover{
   /* -webkit-box-shadow: 0 0 20px rgba(59, 39, 97, 0.9); */
-
 }
+
+
+/* #point2 {
+  animation: blink1 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink2 {
+  0% {opacity: 0;}
+  50% {opacity: 1}
+  100% {opacity: 0.5;}
+}
+
+#point3 {
+  animation: blink3 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink3 {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+#point4 {
+  animation: blink4 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink4 {
+  0% {opacity: 0;}
+  80% {opacity: 1}
+  100% {opacity: 0;}
+}
+
+#point5 {
+  animation: blink5 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink5 {
+  0% {opacity: 0;}
+  60% {opacity: 1}
+  100% {opacity: 0;}
+} */
+
 
 
 /* put logo-surname-p by the svg */
@@ -190,7 +235,60 @@ svg:hover{
   opacity: 0;
 }
 
+#point1 {
+  animation: blink1 3s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes blink1 {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#point2 {
+  animation: blink2 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink2 {
+  0% {opacity: 1;}
+  40% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#point3 {
+  animation: blink3 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink3 {
+  0% {opacity: 1;}
+  30% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#point4 {
+  animation: blink4 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink4 {
+  0% {opacity: 1;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#point5 {
+  animation: blink5 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink5 {
+  0% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 
 /* Slide button styling */
@@ -254,3 +352,5 @@ svg:hover{
   left: 7rem;
   top: -9.5rem;
 }
+
+
