@@ -146,7 +146,7 @@
       let init_delay = ((counter===2) ? "1s": "0s");
       var line = document.getElementById('Vector-1');
       line.style.zIndex = 2;
-      line.style.transition = `opacity 1s ease-in ${init_delay}, z-index 0.5s ease-in-out`;
+      line.style.transition = `opacity 1s ease-in ${init_delay}, z-index 0.5s ease-out`;
       line.style.opacity = opac_counter % 2;
     }
 
