@@ -235,6 +235,17 @@ svg:hover{
   opacity: 0;
 }
 
+#Line-1 {
+  animation: slideIn 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100px); }
+  80% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
 #point1 {
   animation: blink1 3s;
   animation-iteration-count: infinite;

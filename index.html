@@ -25,7 +25,7 @@
 </head>
 
 
-<body>
+<body onload="show();">
   <div class="blurred-box">
     <div class="center-div">
       <svg width="50" height="99" viewBox="0 0 50 99" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="show()">
@@ -143,77 +143,61 @@
     }
 
     function draw_line() {
+      let init_delay = ((counter===2) ? "1s": "0s");
       var line = document.getElementById('Vector-1');
       line.style.zIndex = 2;
-      line.style.transition = 'opacity 0.5s ease-in 0.5s, z-index 0.5s ease-in-out 1s';
+      line.style.transition = `opacity 1s ease-in ${init_delay}, z-index 0.5s ease-in-out`;
       line.style.opacity = opac_counter % 2;
     }
 
 
     function opacity_smooth() {
+      
+      let init_delay = ((counter===2) ? 2 : 1);
 
       var logo = document.getElementById('logo-name-p');
-      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s';
-      // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
+      logo.style.transition = `opacity 1s cubic-bezier(1,-0.43, 0.31, 0.68) ${init_delay}s , box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s`;
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
       
       var logo = document.getElementById('logo-surname-p');
-      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s';
-      // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
+      logo.style.transition = `opacity 1s cubic-bezier(1,-0.43, 0.31, 0.68) ${init_delay}s, box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s`;
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
 
       var logo = document.getElementById('logo-profession-p');
-      logo.style.transition = 'opacity 2s cubic-bezier(1,-0.43, 0.31, 0.68), box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s';
-      // logo.style.transition = 'opacity 1.5s cubic-bezier(1,-0.43, 0.31, 0.68)';
+      logo.style.transition = `opacity 1s cubic-bezier(1,-0.43, 0.31, 0.68) ${init_delay}s, box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s`;
       logo.style.opacity = opac_counter % 2;
       logo.style.zIndex = opac_counter % 2 ;
-
-      // var logo = document.getElementById('point1');
-      // logo.style.transition = 'opacity 5s 5s'
-      // logo.style.opacity = 1;
-      // logo.style.animationIterationCount = opac_counter % 2;
-      // var logo = document.getElementById('point2');
-      // logo.style.animationIterationCount = opac_counter % 2;
-      // var logo = document.getElementById('point3');
-      // logo.style.animationIterationCount = opac_counter % 2;
-      // var logo = document.getElementById('point4');
-      // logo.style.animationIterationCount = opac_counter % 2;
-      // var logo = document.getElementById('point5');
-      // logo.style.animationIterationCount = opac_counter % 2;
-
-      
 
       var about = document.getElementById('about-btn')
       about.style.pointerEvents = ((opac_counter%2==1) ? 'auto' : 'none');
       about.style.opacity = opac_counter % 2;
       about.style.zIndex = opac_counter % 2 ;
-      about.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
+      about.style.transition = `opacity 0.5s ${init_delay+0.5*init_delay}s, z-index 0.5s ease-in-out 1s`;
 
       var contact = document.getElementById('contact-btn')
       contact.style.pointerEvents = ((opac_counter%2==1) ? 'auto' : 'none');
-      contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
+      contact.style.transition = `opacity 0.5s ${init_delay+0.5*init_delay}s, z-index 0.5s ease-in-out 1s`;
       contact.style.opacity = opac_counter % 2;
       contact.style.zIndex = opac_counter % 2 ;
 
       var info = document.getElementById('info-div');
       info.style.opacity = 0;
       info.style.zIndex = opac_counter % 2 - 1;
-      info.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
+      info.style.transition = `opacity 0.5s ${init_delay+0.5*init_delay}s, z-index 0.5s ease-in-out 1s`;
       // console.log(info.style.opacity)
 
       var contact = document.getElementById('contact-div');
       contact.style.opacity = 0;
       contact.style.zIndex = opac_counter % 2 -1;
-      contact.style.transition = 'opacity 0.5s 1s, z-index 0.5s ease-in-out 1s';
+      contact.style.transition = `opacity 0.5s ${init_delay+0.5*init_delay}s, z-index 0.5s ease-in-out 1s`;
       // console.log(contact.style.opacity)
-
-
 
     }
 
     function rotate_svg() {
+      let init_delay = ((counter===2) ? "2.5s" : "1s");
       var svg = document.getElementsByTagName('svg')[0];
       var logo = document.getElementsByTagName('logo-surname-p')[0];
       var svg_rect = svg.getBoundingClientRect();
@@ -224,7 +208,7 @@
         svg.style.transform = 'rotate(-90deg) scale(3)';
       }
 
-      svg.style.transition = 'box-shadow 0.3s ease-in-out, transform 0.75s ease-in-out 1s';
+      svg.style.transition = `box-shadow 0.3s ease-in-out, transform 0.75s ease-in-out ${init_delay}`;
     }
 
   </script>
