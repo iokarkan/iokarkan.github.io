@@ -118,6 +118,7 @@
   </div>
 
   <script>
+    // initial animation of vector-1
     let counter = 2;
 
     function show() {
@@ -143,17 +144,18 @@
     }
 
     function draw_line() {
-      let init_delay = ((counter===2) ? "1s": "0s");
+      let init_delay = ((counter===2) ? "0.75s": "0s");
       var line = document.getElementById('Vector-1');
-      line.style.zIndex = 2;
-      line.style.transition = `opacity 1s ease-in ${init_delay}, z-index 0.5s ease-out`;
+      line.style.animationDirection = ((counter===2) ? "normal" : "reverse")
+      line.style.zIndex = 1;
+      line.style.transition = `opacity 1.5s ease-in-out ${init_delay}, z-index 0.5s ease-out 0s`;
       line.style.opacity = opac_counter % 2;
     }
-
 
     function opacity_smooth() {
       
       let init_delay = ((counter===2) ? 2 : 1);
+      
 
       var logo = document.getElementById('logo-name-p');
       logo.style.transition = `opacity 1s cubic-bezier(1,-0.43, 0.31, 0.68) ${init_delay}s , box-shadow 0.3s ease-in-out, z-index 0.5s ease-in-out 1s`;

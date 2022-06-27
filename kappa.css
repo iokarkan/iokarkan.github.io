@@ -39,8 +39,9 @@ https://medium.com/@AmJustSam
   /* background: inherit; */
   border-radius: 20px;
   /* overflow: hidden; */
-
 }
+
+
 
 .blurred-box::after {
   content: '';
@@ -233,7 +234,20 @@ svg:hover{
 
 #Vector-1 {
   opacity: 0;
+  animation: appearInit 3s;
+  animation-iteration-count: 1 ;
 }
+
+
+@keyframes appearInit {
+  0% {opacity: 0; }
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+  /* 70% {opacity: 0;}
+  100% {opacity: 1;} */
+}
+
+
 
 #Line-1 {
   animation: slideIn 1s;
